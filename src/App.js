@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [password,setPassword]=useState("")
+  const [confirmPassword,setConfirnPassword]=useState("")
+  const[show,setShow]=useState(false);
+  const handleChange=(e)=>{
+    setPassword(e.target.value)
+    console.log(password.toString());
+  }
+
+  
+  const handlePass=(e)=>{
+    setConfirnPassword(e.target.value)
+    console.log(confirmPassword)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+    {(password.toString()===confirmPassword.toString() && password.length!==0)?
+    (<div>
+    <input type="password" placeholder="Please enter the password" onChange={handleChange}  name="password1" value={password}/>
+    <input type="password" placeholder="Confirm Password" onChange={handlePass} name="password2" value={confirmPassword}/>
+    <button>Submit</button></div>):<div>
+    <input type="password" placeholder="Please enter the password" onChange={handleChange}  name="password1" value={password}/>
+    <input type="password" placeholder="Confirm Password" onChange={handlePass} name="password2" value={confirmPassword}/>
+    </div>
+    }
+   
+  
     </div>
   );
 }
