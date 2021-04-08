@@ -4,16 +4,16 @@ import './App.css';
 function App() {
   const [password,setPassword]=useState("")
   const [confirmPassword,setConfirnPassword]=useState("")
-  const[show,setShow]=useState(false);
+ 
   const handleChange=(e)=>{
     setPassword(e.target.value)
-    console.log(password.toString());
+   // console.log(password.toString());
   }
 
   
   const handlePass=(e)=>{
     setConfirnPassword(e.target.value)
-    console.log(confirmPassword)
+    //console.log(confirmPassword)
   }
   return (
     <div className="app">
