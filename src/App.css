@@ -6,16 +6,16 @@ margin: 200px 550px;
     flex-direction: column;
 }
 .passwordForm >input{
-    width: 340px;
-    height: 43px;
+    width: 360px;
+    height: 44px;
     font-size: 15px;
-    padding-left: 20px;
+    padding-left: 18px;
     margin-bottom: 10px;
-    border: 1px solid rgba(128,128,128,0.4);
+   
     }
     button {
-        width: 360px;
-        height: 46px;
+        width: 388px;
+        height: 48px;
         font-size: medium;
         cursor: pointer ;
         margin-bottom: 10px;

@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirnPassword] = useState("");
+
   const handleChange = (e) => {
     setPassword(e.target.value);
     // console.log(password.toString());
@@ -15,8 +16,8 @@ function App() {
   };
   return (
     <div className="app">
-      {password.toString() === confirmPassword.toString() &&
-      password.length !== 0 ? (
+      {(password.toString() === confirmPassword.toString() &&
+      password.length !== 0) ? (
         <form className="passwordForm">
           <input
             type="password"
